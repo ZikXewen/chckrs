@@ -19,7 +19,7 @@ type ParsedData = {
   board: string
 }
 const Game: Component<GameProps> = ({ gameId }) => {
-  const wsUrl = `ws://${import.meta.env.VITE_SOCKET_URL}/game/${gameId}`
+  const wsUrl = `wss://${import.meta.env.VITE_SOCKET_URL}/game/${gameId}`
   const splitter = new Splitter()
   const socket = new WebSocket(wsUrl)
   const [game, setGame] = createSignal<Game>({ board: [], turn: 'white' })
