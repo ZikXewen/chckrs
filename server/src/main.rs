@@ -1,6 +1,6 @@
 use futures::{SinkExt, StreamExt, TryFutureExt};
 use nanoid::nanoid;
-use std::{collections::HashMap, sync::Arc};
+use std::{collections::HashMap, env, sync::Arc};
 use tokio::sync::{mpsc, RwLock};
 use tokio_stream::wrappers::UnboundedReceiverStream;
 use warp::{ws::Message, Filter};
@@ -21,7 +21,15 @@ async fn main() {
         });
     let index = warp::path::end().map(|| "Endpoint for checkers game");
     let routes = index.or(game);
-    warp::serve(routes).run(([127, 0, 0, 1], 3030)).await;
+    warp::serve(routes)
+        .run((
+            [0, 0, 0, 0],
+            env::var("PORT")
+                .unwrap_or("3030".to_string())
+                .parse()
+                .unwrap(),
+        ))
+        .await;
 }
 
 async fn on_upgrade(game_id: String, websocket: warp::ws::WebSocket, games: Games) {
