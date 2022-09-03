@@ -17,6 +17,8 @@
     "vite-plugin-solid": "^2.3.0"
   },
   "dependencies": {
+    "grapheme-splitter": "^1.0.4",
+    "nanoid": "^4.0.0",
     "solid-js": "^1.5.1"
   }
 }

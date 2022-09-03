@@ -5,4 +5,11 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  safelist: [
+    // "after:content-['🟦']",
+    "after:content-['⬛']",
+    "after:content-['⬜']",
+    "after:content-['⚪']",
+    "after:content-['⚫']",
+  ],
 }

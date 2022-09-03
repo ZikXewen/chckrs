@@ -2,6 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   autoprefixer: ^10.4.8
+  grapheme-splitter: ^1.0.4
+  nanoid: ^4.0.0
   postcss: ^8.4.16
   solid-js: ^1.5.1
   tailwindcss: ^3.1.8
@@ -10,6 +12,8 @@ specifiers:
   vite-plugin-solid: ^2.3.0
 
 dependencies:
+  grapheme-splitter: 1.0.4
+  nanoid: 4.0.0
   solid-js: 1.5.1
 
 devDependencies:
@@ -878,6 +882,10 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
+  /grapheme-splitter/1.0.4:
+    resolution: {integrity: sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==}
+    dev: false
+
   /has-flag/3.0.0:
     resolution: {integrity: sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw==}
     engines: {node: '>=4'}
@@ -984,6 +992,12 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
     dev: true
+
+  /nanoid/4.0.0:
+    resolution: {integrity: sha512-IgBP8piMxe/gf73RTQx7hmnhwz0aaEXYakvqZyE302IXW3HyVNhdNGC+O2MwMAVhLEnvXlvKtGbtJf6wvHihCg==}
+    engines: {node: ^14 || ^16 || >=18}
+    hasBin: true
+    dev: false
 
   /node-releases/2.0.6:
     resolution: {integrity: sha512-PiVXnNuFm5+iYkLBNeq5211hvO38y63T0i2KKh2KnUs3RpzJ+JtODFjkD8yjLwnDkTYF1eKXheUwdssR+NRZdg==}
